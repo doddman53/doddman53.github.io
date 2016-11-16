@@ -69,7 +69,13 @@ var t=b.contentWindow[g];t.write(p());t.close()}catch(x){
 b[k]=o+'d.write("'+p().replace(/"/g,String.fromCharCode(92)+'"')+'");d.close();'}a.P(2)};ld()};nt()})({
 loader: "static.olark.com/jsclient/loader0.js",name:"olark",methods:["configure","extend","declare","identify"]});
 /* custom configuration goes here (www.olark.com/documentation) */
+
+// Online
 olark.configure('CalloutBubble.bubble_image_url', 'PatrickSurprise.jpg' );
+olark.configure('CalloutBubble.bubble_width', 349);
+olark.configure('CalloutBubble.bubble_height', 349);
+
+// Offline
 olark.configure('CalloutBubble.offline_bubble_image_url', 'PatrickSurprise.jpg' );
 olark.configure('CalloutBubble.bubble_width', 349);
 olark.configure('CalloutBubble.bubble_height', 349);
