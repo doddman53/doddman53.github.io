@@ -1,5 +1,9 @@
 body{
-	background-image: url(https://westernblacktown.files.wordpress.com/2012/04/megaphone.png);
-	background-repeat: no-repeat;
-	background-size: 25%;
+	text-align: center;
+}
+
+#container{
+	margin: 0 auto;
+	width: 750px;
+	text-align: left;
 }
