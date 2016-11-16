@@ -50,7 +50,20 @@
 		
 
 					<!-- Enable the Attention Grabber -->
-					<script>olark.configure("features.attention_grabber", true);</script>
+				<script>
+					olark.configure("features.attention_grabber", true);
+					// Offline
+					olark.configure('CalloutBubble.offline_bubble_image_url', 'PatrickSurprise.jpg' );
+					olark.configure('CalloutBubble.offline_bubble_width', 349);
+					olark.configure('CalloutBubble.offline_bubble_height', 349);
+
+					// Online
+					olark.configure('CalloutBubble.bubble_image_url', 'PatrickSurprise.jpg' );
+					olark.configure('CalloutBubble.bubble_width', 349);
+					olark.configure('CalloutBubble.bubble_height', 349);
+
+					olark.configure('CalloutBubble.slide', true);
+				</script>
 
 			   <!-- begin olark code -->
 <script data-cfasync="false" type='text/javascript'>/*<![CDATA[*/window.olark||(function(c){var f=window,d=document,l=f.location.protocol=="https:"?"https:":"http:",z=c.name,r="load";var nt=function(){
@@ -72,17 +85,7 @@ loader: "static.olark.com/jsclient/loader0.js",name:"olark",methods:["configure"
 /* custom configuration goes here (www.olark.com/documentation) */
 
 
-// Offline
-olark.configure('CalloutBubble.offline_bubble_image_url', 'PatrickSurprise.jpg' );
-olark.configure('CalloutBubble.offline_bubble_width', 349);
-olark.configure('CalloutBubble.offline_bubble_height', 349);
 
-// Online
-olark.configure('CalloutBubble.bubble_image_url', 'PatrickSurprise.jpg' );
-olark.configure('CalloutBubble.bubble_width', 349);
-olark.configure('CalloutBubble.bubble_height', 349);
-
-olark.configure('CalloutBubble.slide', true);
 
 olark.configure('WelcomeAssist.welcome_new_visitors', true );
 olark.configure('features.greeter', true);
