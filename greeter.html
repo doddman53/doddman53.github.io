@@ -1,39 +1,36 @@
 <!DOCTYPE html>
-	<html>
-		<head>
-			<title>Welcome | Intro to Olark Chatbot</title>
-			<link rel="shortcut icon" href="C:\Users\doddm\Desktop\CS 290\olark.ico" />
-			<link rel="stylesheet" href="howto.css" type="text/css">
-		</head>
-		<body>
+	<head>
+		<title>How-To | Greeter</title>
+		<link rel="shortcut icon" href="C:\Users\doddm\Desktop\CS 290\olark.ico" />
+		<link rel="stylesheet" href="howto.css" type="text/css">	
+	</head>
+	<body>
 		<div id="container">
-			<h1>Welcome!!</h1>
+			<h1>Getting Started With Attention Grabber</h1>
 			<nav>
 				<strong><a href="index.html">| Home </a></strong>
 				<strong><a href="attentionGrabber.html">| Attention Grabber </a></strong>
 				<strong><a href="appearance.html">| Appearance </a></strong>
 				<strong><a href="greeter.html">| Greet Your Users |</a></strong>
 			</nav>
-			<img src="https://media.licdn.com/media/p/2/000/27a/1cb/3ea709e.png"></img>
-				<h3>Have You Ever...</h3>
-					<p>We've all been there before - stuck on hold in a seemingly endless
-				   	   queue with that dreaded 800 number on the other line. You have more
-				   	   things on your priority list higher than sitting on hold for 20 
-				   	   minutes, and not even really being sure you'll talk to a person once
-				   	   the wait is over. The thing is, you really need some information
-				   	   about what that extended warranty covers, or what have you. That's
-				   	   where handy tools like Olark Chatbot comes in to play! Chatbot is a
-				   	   live chat tool that can be integrated with any website, and allows
-				   	   for direct, live interaction with customers. This poses less risk to
-				   	   a customer than calling an 800 number, and less risk means better
-				   	   customer relations, which means a more successful business! Here we
-				   	   will discuss the Olark Chatbot API, and some fun and unique ways in
-				   	   which you can integrate it with your page. <em><a href="C:\Users\doddm\Desktop\CS 290\howto\attentionGrabber.html">Let's get started!</a></em></p>
+				<h3>Greeter Settings</h3>
+					<p>
+						Another cool customizable feature of the chat box is the Greeter. You can write your own custom messages, set the the amount of time you'd like to wait before the message appears, and even define rules for your chatbox for how it behaves with new visitors and when it engages the user.
+					</p>
+					<br><br><li><strong>Enable the Greeter</strong></li>
+						<dd><br>
+							First off, you need to enable the Greeter for the specific page. Then you need to set the number of seconds you want the Greeter to wait until it prints the message. Finally, configure your own custom messages.
+						</dd>
+
+					<br><br><li><strong>Define Some Rules</strong></li>
+						<dd><br>
+							You can dive in a little deeper by defining rules for your chat box to follow. You might want the Greeter to greet only first time visitors. You also might only want to ask a visitor if they need help once per visit to the page. You can write your own JavaScript to make use of the functions provided <a href="https://www.olark.com/api#api.rules.defineRule">here</a> if you so choose. Here's an example of a way to personalize the chat box rules below:
+						</dd>
 		</div>
 
+		<script src="engage.js"></script>
 
-				   	   <!-- begin olark code -->
-<script data-cfasync="false" type='text/javascript'>/*<![CDATA[*/window.olark||(function(c){var f=window,d=document,l=f.location.protocol=="https:"?"https:":"http:",z=c.name,r="load";var nt=function(){
+		<script data-cfasync="false" type='text/javascript'>/*<![CDATA[*/window.olark||(function(c){var f=window,d=document,l=f.location.protocol=="https:"?"https:":"http:",z=c.name,r="load";var nt=function(){
 f[z]=function(){
 (a.s=a.s||[]).push(arguments)};var a=f[z]._={
 },q=c.methods.length;while(q--){(function(n){f[z][n]=function(){
@@ -50,7 +47,15 @@ var t=b.contentWindow[g];t.write(p());t.close()}catch(x){
 b[k]=o+'d.write("'+p().replace(/"/g,String.fromCharCode(92)+'"')+'");d.close();'}a.P(2)};ld()};nt()})({
 loader: "static.olark.com/jsclient/loader0.js",name:"olark",methods:["configure","extend","declare","identify"]});
 /* custom configuration goes here (www.olark.com/documentation) */
+
+olark.configure('features.greeter', true );
+
+olark.configure('WelcomeAssist.welcome_delay_in_seconds', 5 );
+
+olark.configure('WelcomeAssist.welcome_messages', ['This is a custom message.', 'Hello there! Custom messages are fun!',
+												   'Thanks for visiting this How-To guide, how can I help you?']);
+
+
 olark.identify('6854-997-10-1606');/*]]>*/</script><noscript><a href="https://www.olark.com/site/6854-997-10-1606/contact" title="Contact us" target="_blank">Questions? Feedback?</a> powered by <a href="http://www.olark.com?welcome" title="Olark live chat software">Olark live chat software</a></noscript>
 <!-- end olark code -->
-		</body>
-	</html>
+	</body>
