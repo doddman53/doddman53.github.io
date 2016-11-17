@@ -1,37 +1,29 @@
 <!DOCTYPE html>
 	<head>
-		<title>How-To | Greeter</title>
+		<title>How-To | All Together Now!</title>
 		<link rel="shortcut icon" href="C:\Users\doddm\Desktop\CS 290\olark.ico" />
 		<link rel="stylesheet" href="howto.css" type="text/css">	
 	</head>
 	<body>
 		<div id="container">
-			<h1>Getting Started With Attention Grabber</h1>
+			<h1>The Grand Composition</h1>
 			<nav>
 				<strong><a href="index.html">| Home </a></strong>
 				<strong><a href="attentionGrabber.html">| Attention Grabber </a></strong>
-				<strong><a href="appearance.html">| Appearance </a></strong>
-				<strong><a href="greeter.html">| Greet Your Users </a></strong>
+				<strong><a href="appearance.html">| Appearance |</a></strong>
+				<strong><a href="greeter.html">| Greet Your Users |</a></strong>
 				<strong><a href="combined.html">| See It All Together |</a></strong>
 			</nav>
-				<h3>Greeter Settings</h3>
+				<h3>Put It All Together</h3>
 					<p>
-						Another cool customizable feature of the chat box is the Greeter. You can write your own custom messages, set the the amount of time you'd like to wait before the message appears, and even define rules for your chatbox for how it behaves with new visitors and when it engages the user.
+						Now let's combine everything we've done to create a cool custom chat box! You can now see all of the changes to the
+						chat box in the bottom right corner of the screen. I hope you enjoyed this tutorial!
 					</p>
-					<br><br><li><strong>Enable the Greeter</strong></li>
-						<dd><br>
-							First off, you need to enable the Greeter for the specific page. Then you need to set the number of seconds you want the Greeter to wait until it prints the message. Finally, configure your own custom messages.
-						</dd>
-						<script async src="//jsfiddle.net/doddp/gzbnyhd6/embed/js/"></script>
-
-					<br><br><li><strong>Define Some Rules</strong></li>
-						<dd><br>
-							You can dive in a little deeper by defining rules for your chat box to follow. You might want the Greeter to greet only first time visitors. You also might only want to ask a visitor if they need help once per visit to the page. You can write your own JavaScript to make use of the functions provided <a href="https://www.olark.com/api#api.rules.defineRule">here</a> if you so choose. Below is a slightly modified example from <a href="https://www.olark.com/">Olark's</a> website of how you can modify the rules for your greetings, used on this page:
-						</dd>
-						<script async src="//jsfiddle.net/doddp/b7hfa7Ls/embed/js/"></script>
+						<script async src="//jsfiddle.net/doddp/km7pt0q6/1/embed/"></script>
 		</div>
 
-		<script data-cfasync="false" type='text/javascript'>/*<![CDATA[*/window.olark||(function(c){var f=window,d=document,l=f.location.protocol=="https:"?"https:":"http:",z=c.name,r="load";var nt=function(){
+						   	   <!-- begin olark code -->
+<script data-cfasync="false" type='text/javascript'>/*<![CDATA[*/window.olark||(function(c){var f=window,d=document,l=f.location.protocol=="https:"?"https:":"http:",z=c.name,r="load";var nt=function(){
 f[z]=function(){
 (a.s=a.s||[]).push(arguments)};var a=f[z]._={
 },q=c.methods.length;while(q--){(function(n){f[z][n]=function(){
@@ -49,15 +41,44 @@ b[k]=o+'d.write("'+p().replace(/"/g,String.fromCharCode(92)+'"')+'");d.close();'
 loader: "static.olark.com/jsclient/loader0.js",name:"olark",methods:["configure","extend","declare","identify"]});
 /* custom configuration goes here (www.olark.com/documentation) */
 
+// Offline Attention Grabber
+olark.configure('CalloutBubble.offline_bubble_image_url',
+'PatrickSurprise.jpg' );
+olark.configure('CalloutBubble.offline_bubble_width', 349);
+olark.configure('CalloutBubble.offline_bubble_height', 349);
+
+// Online Attention Grabber
+olark.configure('CalloutBubble.bubble_image_url', 'PatrickSurprise.jpg' );
+olark.configure('CalloutBubble.bubble_width', 349);
+olark.configure('CalloutBubble.bubble_height', 349);
+
+// Enable the slide animation
+olark.configure('CalloutBubble.slide', true);
+
+// Change the primary color
+olark.configure('system.hb_primary_color', '#ffa07a'); // light salmon
+
+// Set the chatbox to the right of the screen
+olark.configure('system.hb_position', 'right');
+
+// Show the chatbox as a bubble
+olark.configure('system.hb_show_as_tab', false);
+
+// Show the chatbox with a dark theme
+olark.configure('system.hb_dark_theme', true);
+
+// Display welcome message to new visitors
 olark.configure('WelcomeAssist.welcome_new_visitors', true );
 
+// Enable the greeter
 olark.configure('features.greeter', true );
 
+// Set the greeting delay to 5 seconds
 olark.configure('WelcomeAssist.welcome_delay_in_seconds', 5 );
 
+// Configure custom greetings
 olark.configure('WelcomeAssist.welcome_messages', ['This is a custom message.', 'Hello there! Custom messages are fun!',
 												   'Thanks for visiting this How-To guide, how can I help you?']);
-
 
 olark.identify('6854-997-10-1606');/*]]>*/</script><noscript><a href="https://www.olark.com/site/6854-997-10-1606/contact" title="Contact us" target="_blank">Questions? Feedback?</a> powered by <a href="http://www.olark.com?welcome" title="Olark live chat software">Olark live chat software</a></noscript>
 
