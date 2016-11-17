@@ -1,7 +1,6 @@
 olark('api.rules.defineRule', {
 
-    // Specify a unique ID for this rule.
-    // This helps the API to keep your rules separate from each other.
+    // Specify a unique id
     id: '1',
 
     // The description summarizes what this rule does
@@ -16,7 +15,7 @@ olark('api.rules.defineRule', {
 
             if (details.pageCountForThisVisit >= 1 && !details.isConversing) {
 
-                // The visitor has seen more than 5 pages, and the visitor hasn't started chatting yet
+                // The visitor has seen more than 1 page, and the visitor hasn't started chatting yet
                 pass();
             }
 
