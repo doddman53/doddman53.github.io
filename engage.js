@@ -5,7 +5,7 @@ olark('api.rules.defineRule', {
     id: '1',
 
     // The description summarizes what this rule does
-    description: "offer help to a visitor after he has browsed 5 pages and hasn't chatted yet",
+    description: "ask the user if they need assistance at first visit.",
 
     // The condition will be checked whenever there is a relevant change in the chat.
     // Call the pass() function whenever the criteria is met
@@ -32,7 +32,7 @@ olark('api.rules.defineRule', {
         });
     },
 
-    // Restrict this action to execute only once per visit
+    // For purpose of this example, show the message with each visit
     perVisit: false
     perVisitor: false
 });
