@@ -33,6 +33,6 @@ olark('api.rules.defineRule', {
     },
 
     // Restrict this action to execute only once per visit
-    perVisit: false;
-
+    perVisit: false
+    perVisitor: false
 });
