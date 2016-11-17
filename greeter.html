@@ -48,6 +48,8 @@ b[k]=o+'d.write("'+p().replace(/"/g,String.fromCharCode(92)+'"')+'");d.close();'
 loader: "static.olark.com/jsclient/loader0.js",name:"olark",methods:["configure","extend","declare","identify"]});
 /* custom configuration goes here (www.olark.com/documentation) */
 
+olark.configure('WelcomeAssist.welcome_new_visitors', true );
+
 olark.configure('features.greeter', true );
 
 olark.configure('WelcomeAssist.welcome_delay_in_seconds', 5 );
