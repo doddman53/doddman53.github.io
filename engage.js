@@ -14,7 +14,7 @@ olark('api.rules.defineRule', {
         // Use the Visitor API to get information the page count
         olark('api.visitor.getDetails', function(details){
 
-            if (details.pageCountForThisVisit >= 5 && !details.isConversing) {
+            if (details.pageCountForThisVisit >= 1 && !details.isConversing) {
 
                 // The visitor has seen more than 5 pages, and the visitor hasn't started chatting yet
                 pass();
@@ -28,11 +28,11 @@ olark('api.rules.defineRule', {
     // Limit the number of times this action will trigger using the perPage, perVisit, and perVisitor options.
     action: function() {
         olark('api.chat.sendMessageToVisitor', {
-            body: "hi, have any questions about our products?"
+            body: "Hello there, do have any questions about this fancy how-to page?"
         });
     },
 
     // Restrict this action to execute only once per visit
-    perVisit: true
+    perVisit: false;
 
 });
